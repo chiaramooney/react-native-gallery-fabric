@@ -27,6 +27,7 @@ import {PlatformColor} from 'react-native';
 //import { ButtonExamplePage } from './examples/ButtonExamplePage';
 import {HomePage} from './HomePage';
 import { DatePickerExamplePage } from './examples/DatePickerExamplePage';
+import AppContext from './AppContext';
 
 const styles = StyleSheet.create({
   menu: {
@@ -351,8 +352,11 @@ export default function App() {
   //const theme = rawtheme === 'system' ? colorScheme! : rawtheme;
 
   //const isHighContrast = useHighContrastState();
+  const [showHome, setShowHome] = React.useState(true);
 
   return (
-    <DatePickerExamplePage/>
+    <AppContext.Provider value={{showHome, setShowHome}}>
+      {showHome ? <HomePage/> : <DatePickerExamplePage/>}
+    </AppContext.Provider>
   );
 }

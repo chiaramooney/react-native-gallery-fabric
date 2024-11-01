@@ -30,13 +30,16 @@ const PagingButton = ({left, onPress}: PagingButtonProps) => {
       <View
         style={{
           backgroundColor: hover
-            ? PlatformColor('ControlFillColorSecondaryBrush')
-            : PlatformColor('ControlFillColorDefaultBrush'),
+            ? '#f3f3f3'
+            : '#f9f9f9',
           borderRadius: 24,
           borderWidth: 1,
           borderColor: hover
-            ? PlatformColor('ControlElevationBorderBrush')
-            : PlatformColor('CircleElevationBorderBrush'),
+            ? '#b6b9bc'
+            : '#b7babd',
+          opacity: hover
+            ? 0.5
+            : 0.8,
           alignItems: 'center',
           justifyContent: 'center',
           minWidth: 48,

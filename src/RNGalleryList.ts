@@ -96,6 +96,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     imageIcon: require('../assets/ControlImages/Button.png'),
     subtitle: 'A control that responds to user input and raises a Click event.',
     type: 'Basic Input',
+    new: true,
   },
   /*{
     key: 'CheckBox',
@@ -127,6 +128,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     imageIcon: require('../assets/ControlImages/DatePicker.png'),
     subtitle: 'A control that lets a user pick a date value.',
     type: 'Date & time',
+    recentlyUpdated: true,
   },
   /*{
     key: 'DeviceInfo',
@@ -214,6 +216,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     subtitle:
       'A component that can detect various stages of press interactions on any of its defined children.',
     type: 'Basic Input',
+    new: true,
   },
   /*{
     key: 'Print',
@@ -248,6 +251,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     subtitle:
       'A container control that lets the user pan and zoom its content.',
     type: 'Scrolling',
+    new: true,
   },
   /*{
     key: 'SensitiveInfo',
@@ -278,6 +282,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     subtitle:
       'A button that can be switched between two states like a CheckBox.',
     type: 'Basic Input',
+    new: true,
   },
   /*{
     key: 'Svg',
@@ -294,6 +299,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     imageIcon: require('../assets/ControlImages/TextBlock.png'),
     subtitle: 'A lightweight control for displaying small amounts of text.',
     type: 'Text',
+    new: true,
   },
   {
     key: 'TextInput',
@@ -302,6 +308,7 @@ export const RNGalleryList: Array<IRNGalleryExample> = [
     imageIcon: require('../assets/ControlImages/TextBox.png'),
     subtitle: 'A single-line or multi-line plain text field.',
     type: 'Text',
+    new: true,
   },
   /*{
     key: 'TimePicker',

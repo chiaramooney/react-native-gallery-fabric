@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     fontSize: 28,
   },
   titlePane: {
-    marginTop: 44,
+    marginTop: 24,
     marginBottom: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',

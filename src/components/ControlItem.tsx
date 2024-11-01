@@ -10,16 +10,17 @@ import {
 import React from 'react';
 //import {useTheme} from '@react-navigation/native';
 import type {IRNGalleryExample} from './RNGalleryList';
+import AppContext from './../AppContext';
 
 const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
   StyleSheet.create({
     controlItem: {
-      backgroundColor: PlatformColor('CardBackgroundFillColorDefaultBrush'),
+      backgroundColor: '#fdfdfd',
       borderColor: isPressing
-        ? PlatformColor('TextFillColorSecondaryBrush')
+        ? '#5f5f5f'
         : isHovered
-        ? PlatformColor('ControlStrokeColorSecondary')
-        : PlatformColor('CardStrokeColorDefaultBrush'),
+        ? '#d1d1d1'
+        : '#eaeaea',
       borderWidth: 1,
       borderBottomWidth: 1,
       padding: 8,
@@ -63,7 +64,7 @@ const createStyles = (colors: any, isHovered: boolean, isPressing: boolean) =>
       width: 10,
       height: 10,
       borderRadius: 5,
-      backgroundColor: PlatformColor('AccentFillColorDefaultBrush'),
+      backgroundColor: '#0067c0',
     },
   });
 
@@ -79,6 +80,7 @@ const HomeComponentTile = ({item, navigation}: HomeComponentTileProps) => {
   const [isPressing, setIsPressing] = React.useState(false);
   const colors = {};
   const styles = createStyles(colors, isHovered, isPressing);
+  const { showHome, setShowHome } = React.useContext(AppContext);
 
   // Workaround for accessibility label requirements:
   // 'The Name must not include the same text as the LocalizedControlType.'
@@ -103,6 +105,7 @@ const HomeComponentTile = ({item, navigation}: HomeComponentTileProps) => {
       style={styles.controlItem}
       onPress={() => {
         //navigation.navigate(item.key);
+        setShowHome(false);
       }}
       onPressIn={() => setIsPressing(true)}
       onPressOut={() => setIsPressing(false)}

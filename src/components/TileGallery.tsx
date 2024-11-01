@@ -20,11 +20,11 @@ const createStyles = (isHovered: boolean, _isPressing: boolean) =>
       // Should use 'AcrylicInAppFillColorDefaultBrush', blocked on https://github.com/microsoft/react-native-windows/issues/8861
       // (The acrylic does work, but does not update when the theme changes)
       backgroundColor: isHovered
-        ? PlatformColor('SolidBackgroundFillColorBaseBrush')
-        : PlatformColor('SolidBackgroundFillColorTertiaryBrush'),
+        ? '#f3f3f3'
+        : '#f9f9f9',
       borderColor: isHovered
-        ? PlatformColor('ControlStrokeColorSecondary')
-        : PlatformColor('SurfaceStrokeColorFlyoutBrush'),
+        ? '#b6b9bc'
+        : '#b7babd',
       borderWidth: 1,
       borderRadius: 8,
       padding: 24,
@@ -169,7 +169,7 @@ const TileGallery = () => {
       spacing={12}
       data={items}
       renderItem={({item}) => item}
-      style={{paddingBottom: 0}}
+      style={{paddingBottom: 20}}
       ListHeaderComponent={() => <View style={{width: 36}} />}
       ListFooterComponent={() => <View style={{width: 36}} />}
     />

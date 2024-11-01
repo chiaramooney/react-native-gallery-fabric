@@ -36,16 +36,20 @@ const createStyles = () =>
       position: 'absolute',
       width: '100%',
       height: '100%',
+      backgroundColor: '#ced8e4',
+      borderTopLeftRadius: 8,
+      borderBottomLeftRadius: 8,
     },
     heroBackgroundImage: {
       position: 'absolute',
       resizeMode: 'cover',
       width: '100%',
-      height: '99%',
+      height: '100%',
+      borderBottomLeftRadius: 8,
     },
     pageHeader: {},
     pageTitleContainer: {
-      height: 204,
+      height: 224,
       justifyContent: 'center',
     },
     pageTitle: {
@@ -65,6 +69,7 @@ const PageTitle = () => {
   return (
     // https://github.com/microsoft/WinUI-Gallery/blob/c3cf8db5607c71f5df51fd4eb45d0ce6e932d338/WinUIGallery/Controls/HomePageHeaderImage.xaml#L19
     <View>
+      <View style={styles.heroGradient}></View>
       <Image
         source={require('../assets/GalleryHeaderImage.png')}
         style={[
