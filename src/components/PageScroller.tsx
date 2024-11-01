@@ -6,6 +6,7 @@ import {
   PlatformColor,
   Pressable,
   View,
+  Text,
 } from 'react-native';
 
 type PagingButtonProps = {left: boolean; onPress: () => void};
@@ -45,13 +46,7 @@ const PagingButton = ({left, onPress}: PagingButtonProps) => {
           minWidth: 48,
           minHeight: 48,
         }}>
-        <Image
-          src={left ? leftImage : rightImage}
-          style={{
-            width: 16,
-            height: 16,
-          }}
-        />
+        {left ? <Text style={{fontFamily: 'Segoe MDL2 Assets', fontSize: 14}}>&#xE76B;</Text> : <Text style={{fontFamily: 'Segoe MDL2 Assets', fontSize: 14}}>&#xE76C;</Text>}
       </View>
     </Pressable>
   );
