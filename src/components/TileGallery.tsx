@@ -131,23 +131,29 @@ const TileGallery = () => {
       title="GitHub"
       description="Repository for React Native for Windows."
       link="https://github.com/microsoft/react-native-windows">
-      <View style={{transform: [{scale: 2.05}], marginTop: 20}}>
-        <Text>Path Icon</Text>
-      </View>
+      <Image
+        accessible={true}
+        accessibilityRole="image"
+        source={require('../../assets/HomeHeaderTiles/github-mark.png')}
+        style={{width: 64, height: 64}}
+      />
     </HeaderTile>,
     <HeaderTile
       title="Template Studio"
       description="Accelerates the creation of new WinUI apps using a wizard-based experience."
       link="https://marketplace.visualstudio.com/items?itemName=TemplateStudio.TemplateStudioForWinUICs">
-      <View style={{transform: [{scale: 1.2}]}}>
-      <Text>Path Icon</Text>
-      </View>
+      <Image
+        accessible={true}
+        accessibilityRole="image"
+        source={{uri: 'https://templatestudio.gallerycdn.vsassets.io/extensions/templatestudio/templatestudioforwinuics/5.5/1700023820218/Microsoft.VisualStudio.Services.Icons.Default'}}
+        style={{width: 64, height: 64}}
+      />
     </HeaderTile>,
     <HeaderTile
       title="Code samples"
       description="Find samples that demonstrate specific tasks, features, and APIs."
       link="https://github.com/microsoft/react-native-windows-samples">
-      <Text>Path Icon</Text>
+      <Text style={{fontFamily: 'Segoe MDL2 Assets', fontSize: 58}}>&#xE943;</Text>
     </HeaderTile>,
     <HeaderTile
       title="Partner Center"
