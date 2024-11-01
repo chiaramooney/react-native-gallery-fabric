@@ -7,8 +7,8 @@ export function CommunityModuleBadge() {
   //const {colors} = useTheme();
   return (
     <Badge
-      badgeColor='#0067c0'
-      textColor='#ffffff'
+      badgeColor='#eeeeee'
+      textColor='#505050'
       badgeTitle="Community Module"
       icon={57637}
       description="This component is not a part of React Native core. The package for this component must be explicitly added in order to have access to this component in a React Native project."
